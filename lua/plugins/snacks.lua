@@ -6,9 +6,7 @@ return {
     ---@type snacks.Config
     opts = {
       indent    = { enabled = true },
-      scroll    = { enabled = true },
       gh        = { enabled = true },
-      terminal  = { enabled = true },
 
       styles = {
         notification = {
@@ -29,16 +27,9 @@ return {
         },
       },
 
-      animate = {
-        enabled = true,
-        style = "out",
-        easing = "linear",
-        duration = { step = 60, total = 300 },
-      },
-
       notifier = {
         enabled = true,
-        timeout = 2500,
+        timeout = 3000,
       },
 
       lazygit = {
@@ -101,16 +92,32 @@ return {
           },
         },
       },
+
+      scroll = {
+        animate  = {
+          duration = { step = 10, total = 200 },
+          easing = "linear",
+        },
+        animate_repeat = {
+          delay = 100,
+          duration = { step = 5, total = 50 },
+          easing = "linear",
+        },
+        filter = function(buf)
+          return vim.g.snacks_scroll ~= false and vim.b[buf].snacks_scroll ~= false and vim.bo[buf].buftype ~= "terminal"
+        end,
+      },
     },
 
     keys = {
       -- notifications
+      { "<leader>nn", function() Snacks.notifier.hide()                 end, desc = "Dismiss all notifications" },
       -- git and github
       { "<leader>gp", function() Snacks.picker.gh_pr({ state = "all" }) end, desc = "Github Pull Requests" },
       { "<leader>gl", function() Snacks.lazygit()                       end, desc = "LazyGit" },
       -- terminal
       { "<leader>tt", function() Snacks.terminal()                      end, desc = "Toggle terminal", },
-      -- other
+      -- zen mode
       { "<leader>z",  function() Snacks.zen()                           end, desc = "Toggle Zen mode", },
       { "<leader>Z",  function() Snacks.zen.zoom()                      end, desc = "Toggle Zoom" },
     },
