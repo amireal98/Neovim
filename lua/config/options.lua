@@ -4,15 +4,14 @@ vim.opt.number = true
 vim.opt.cursorline = true
 vim.opt.relativenumber = true
 vim.opt.showmode = false
-
-vim.o.scrolloff = 5
+vim.o.scrolloff = 4
+vim.opt.smoothscroll = true
 
 -- visual things?
+vim.opt.autoindent = false
+vim.opt.expandtab = true
 vim.opt.tabstop = 2
 vim.opt.shiftwidth = 2
-vim.opt.expandtab = false
-vim.opt.softtabstop = 2
-vim.opt.autoindent = true
 
 -- encondig
 vim.scriptencoding = "utf-8"
