@@ -9,7 +9,7 @@ return {
       scroll    = { enabled = true },
       gh        = { enabled = true },
       terminal  = { enabled = true },
-			dashboard = { enabled = true },
+			dashboard = { enabled = false },
 
       styles = {
         notification = {
