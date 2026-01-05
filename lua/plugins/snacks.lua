@@ -7,6 +7,7 @@ return {
     opts = {
       indent    = { enabled = true },
       gh        = { enabled = true },
+      quickfile = { enabled = true },
 
       styles = {
         notification = {
@@ -30,6 +31,30 @@ return {
       notifier = {
         enabled = true,
         timeout = 3000,
+      },
+
+      dashboard = {
+        enabled = true,
+        width = 60,
+        row = nil,
+        col = nil,
+        pane_gap = 3,
+        autokeys = "1234567890abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ",
+        preset = {
+          ---@type snacks.dashboard.Item[]
+          keys = {
+            { icon = " ", key = "f", desc = "Open Telescope", action = ":lua Snacks.dashboard.pick('files')" },
+            { icon = " ", key = "y", desc = "Open Yazi",      action = ":Yazi cwd" },
+            { icon = " ", key = "q", desc = "Quit",           action = ":qa" },
+          },
+          header = [[
+███╗   ██╗███████╗ ██████╗ ██╗   ██╗██╗███╗   ███╗
+████╗  ██║██╔════╝██╔═══██╗██║   ██║██║████╗ ████║
+██╔██╗ ██║█████╗  ██║   ██║██║   ██║██║██╔████╔██║
+██║╚██╗██║██╔══╝  ██║   ██║╚██╗ ██╔╝██║██║╚██╔╝██║
+██║ ╚████║███████╗╚██████╔╝ ╚████╔╝ ██║██║ ╚═╝ ██║
+╚═╝  ╚═══╝╚══════╝ ╚═════╝   ╚═══╝  ╚═╝╚═╝     ╚═╝]],
+        },
       },
 
       lazygit = {
@@ -111,7 +136,7 @@ return {
 
     keys = {
       -- notifications
-      { "<leader>nn", function() Snacks.notifier.hide()                 end, desc = "Dismiss all notifications" },
+      { "<leader>un", function() Snacks.notifier.hide()                 end, desc = "Dismiss all notifications" },
       -- git and github
       { "<leader>gp", function() Snacks.picker.gh_pr({ state = "all" }) end, desc = "Github Pull Requests" },
       { "<leader>gl", function() Snacks.lazygit()                       end, desc = "LazyGit" },
