@@ -15,7 +15,7 @@ return {
         "markdown",
         "c",
         "nix",
-        "hyprlang",
+        "html",
       },
     },
   },
