@@ -1,10 +1,12 @@
 return {
   {
-    "folke/tokyonight.nvim",
+    "sainnhe/sonokai",
     lazy = false,
     priority = 1000,
     config = function()
-      vim.cmd.colorscheme "tokyonight"
-    end,
+      vim.g.sonokai_enable_italic = true
+      vim.cmd.colorscheme('sonokai')
+
+    end
   },
 }
