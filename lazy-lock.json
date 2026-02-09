@@ -7,7 +7,6 @@
   "nvim-web-devicons": { "branch": "master", "commit": "746ffbb17975ebd6c40142362eee1b0249969c5c" },
   "plenary.nvim": { "branch": "master", "commit": "b9fd5226c2f76c951fc8ed5923d85e4de065e509" },
   "snacks.nvim": { "branch": "main", "commit": "fe7cfe9800a182274d0f868a74b7263b8c0c020b" },
-  "sonokai": { "branch": "master", "commit": "b023c5280b16fe2366f5e779d8d2756b3e5ee9c3" },
   "telescope.nvim": { "branch": "master", "commit": "e69b434b968a33815e2f02a5c7bd7b8dd4c7d4b2" },
-  "yazi.nvim": { "branch": "main", "commit": "0181178a3ca490cb32d8d2bcb4be0292c0cb8180" }
+  "yazi.nvim": { "branch": "main", "commit": "d0f6f796563cfd76a9514191b294d1d98e8da4de" }
 }
