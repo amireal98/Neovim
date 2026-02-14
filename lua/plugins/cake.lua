@@ -2,6 +2,11 @@ return {
   "aikhe/cake.nvim",
   dependencies = "nvzone/volt",
   cmd = { "CakeToggle", "CakeFloat", "CakeSplitV", "CakeSplitH", "CakeRun" },
+  keys = {
+    { "<leader>cf", "<cmd>CakeFloat<cr>",  desc = "Open Cake float" },
+    { "<leader>ct", "<cmd>CakeToggle<cr>", desc = "Toggle Cake" },
+    { "<leader>cr", "<cmd>CakeRun<cr>",    desc = "Cake Run" },
+  },
   opts = {
     terminal = "",
     title = " cake.nvim",
